@@ -3,7 +3,6 @@ const asyncHandler = require('express-async-handler');
 const { generateToken } = require('../config/jwtToken');
 
 // 1. create user
-
 const createUser = asyncHandler(async (req, res) => {
   const email = req.body.email;
   const findUser = await User.findOne({ email: email });
@@ -34,7 +33,7 @@ const loginUserCtrl = asyncHandler(async (req, res) => {
   }
 });
 
-// 2. Get all users
+// 3. Get all users
 const getAllUsers = asyncHandler(async (req, res) => {
   try {
     const getUsers = await User.find();
@@ -44,4 +43,32 @@ const getAllUsers = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { createUser, loginUserCtrl, getAllUsers };
+// 4. Get a user
+const getAUser = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  try {
+    const getUser = await User.findById(id);
+    res.json(getUser);
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
+// 5. Delete a user
+const deleteAUser = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  try {
+    const deleteUser = await User.findByIdAndDelete(id);
+    res.json(deleteUser);
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
+module.exports = {
+  createUser,
+  loginUserCtrl,
+  getAllUsers,
+  getAUser,
+  deleteAUser,
+};
