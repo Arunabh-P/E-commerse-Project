@@ -1,5 +1,4 @@
 const { default: mongoose } = require('mongoose');
-const dotenv = require('dotenv').config();
 const dbConnect = () => {
   try {
     mongoose.set('strictQuery', false);
