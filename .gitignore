@@ -2,9 +2,9 @@
 
 # dependencies
 frontend-user/node_modules
+frontend-admin/node_modules
 backend/node_modules
 backend/.env
-socket/node_modules
 /.pnp
 .pnp.js
 
