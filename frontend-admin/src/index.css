@@ -19,6 +19,56 @@ body {
   margin: 16px;
   background: rgba(255, 255, 255, 0.3);
 }
+
 .ant-layout {
   min-height: 100vh;
+
+  background-color: #f2f5f5 !important;
+}
+.ant-menu-dark,
+.ant-menu-inline,
+.ant-layout-sider,
+.ant-menu {
+  background-color: #296862 !important;
+}
+
+:where(.css-dev-only-do-not-override-diro6f).ant-menu-dark
+  .ant-menu-item-selected {
+  background-color: #1b4440 !important;
+}
+.sm-logo {
+  display: none;
+}
+
+.ant-layout-sider-collapsed .sm-logo {
+  display: block;
+}
+.ant-layout-sider-collapsed .lg-logo {
+  display: none;
+}
+main {
+  overflow: scroll;
+}
+main {
+  height: 85vh;
+  overflow-y: scroll;
+  background-color: transparent !important;
+}
+main::-webkit-scrollbar {
+  width: 0px;
+}
+.ant-menu-title-content {
+  font-size: 16px;
+}
+.ant-layout-header h5 {
+  line-height: 20px;
+  font-size: 14px;
+}
+.ant-layout-header p {
+  line-height: 20px;
+  font-size: 13px;
+}
+.ant-layout-header div .badge {
+  top: 16px;
+  right: -6px;
 }

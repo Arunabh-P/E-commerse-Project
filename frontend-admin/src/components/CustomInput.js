@@ -10,7 +10,7 @@ const CustomInput = (props) => {
         id={i_id}
         placeholder={label}
       />
-      <label htmlFor={label}>Email address</label>
+      <label htmlFor={label}>{label}</label>
     </div>
   );
 };
