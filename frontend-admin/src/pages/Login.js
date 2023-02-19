@@ -11,7 +11,7 @@ const Login = () => {
         className="py-5 mt-5  bg-white rounded-3 mx-auto p-3 "
         style={{ maxWidth: '400px' }}
       >
-        <h3 className="text-center mb-3">Login</h3>
+        <h3 className="text-center mb-3 title">Login</h3>
         <p className="text-center">Login to your account to continue.</p>
         <form action="">
           <CustomInput type="text" label="Email Address" id="email" />

@@ -22,3 +22,23 @@
 .quill {
   background-color: var(--color-white);
 }
+.form-control {
+  box-shadow: none;
+  border-color: var(--color-gray);
+}
+.title {
+  font: 28px;
+  font-family: Roboto !important;
+  color: var(--color-black);
+}
+
+.sub-title {
+  font: 24px;
+  font-family: Roboto !important;
+  color: var(--color-black);
+}
+.desc {
+  font: 14px;
+  font-family: Roboto !important;
+  color: var(--color-violet);
+}

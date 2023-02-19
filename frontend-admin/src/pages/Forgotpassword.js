@@ -11,7 +11,7 @@ const Forgotpassword = () => {
         className="py-5 mt-5  bg-white rounded-3 mx-auto p-3"
         style={{ maxWidth: '400px' }}
       >
-        <h3 className="text-center mb-3">Forgot Password</h3>
+        <h3 className="text-center title  mb-3">Forgot Password</h3>
         <p className="text-center">
           Please enter your registered email address
         </p>
