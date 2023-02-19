@@ -1,11 +1,12 @@
 :root {
-  --color-212529: #212529;
-  --color-ffd333: #ffd333;
+  --color-black: #212529;
+  --color-yellow: #ffd333;
   --color-green: #47ad24;
   --color-red: #e52e2e;
-  --color-828599: #828599;
-  --color-3d464d: #ed464d;
-  --color-c3d4da: #ced4da;
+  --color-violet: #828599;
+  --color-lite-red: #ed464d;
+  --color-gray: #ced4da;
+  --color-white: #ffff;
 }
 
 .green {
@@ -17,4 +18,7 @@
   color: var(--color-red);
   font-size: 14px;
   font-family: Roboto !important;
+}
+.quill {
+  background-color: var(--color-white);
 }

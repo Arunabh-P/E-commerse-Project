@@ -24,16 +24,40 @@ const props = {
     console.log('Dropped files', e.dataTransfer.files);
   },
 };
-const AddBlog = () => {
+
+const AddProduct = () => {
   const [desc, setDesc] = useState();
   const handleDesc = (e) => {
     setDesc(e);
   };
   return (
     <div>
-      <h3 className="mb-4">Add Blog</h3>
+      <h3 className="mb-4">Add Product</h3>
       <div>
         <form action="">
+          <CustomInput type="text" label="Enter Product Title" />
+
+          <div className="mb-3">
+            <ReactQuill
+              theme="snow"
+              value={desc}
+              onChange={(evt) => {
+                handleDesc(evt);
+              }}
+            />
+          </div>
+
+          <CustomInput type="number" label="Enter Product Price" />
+          <select name="" id="" className="form-control py-3 mb-3">
+            <option value="">Select Brand</option>
+          </select>
+          <select name="" id="" className="form-control py-3 mb-3">
+            <option value="">Select Category</option>
+          </select>
+          <select name="" id="" className="form-control py-3 mb-3">
+            <option value="">Select Color</option>
+          </select>
+          <CustomInput type="number" label="Enter Product Quantity" />
           <Dragger {...props}>
             <p className="ant-upload-drag-icon">
               <InboxOutlined />
@@ -46,21 +70,8 @@ const AddBlog = () => {
               uploading company data or other band files
             </p>
           </Dragger>
-          <div className="mt-4">
-            <CustomInput type="text" label="Enter blog title" />
-          </div>
-          <select name="" id="" className="form-control py-3 mb-3">
-            <option value="">Select Blog Category</option>
-          </select>
-          <ReactQuill
-            theme="snow"
-            value={desc}
-            onChange={(evt) => {
-              handleDesc(evt);
-            }}
-          />
-          <button className="btn btn-success border-0 rounded-3 my-5">
-            Add Blog
+          <button className="btn btn-success border-0 rounded-3 my-4">
+            Add Product
           </button>
         </form>
       </div>
@@ -68,4 +79,4 @@ const AddBlog = () => {
   );
 };
 
-export default AddBlog;
+export default AddProduct;
