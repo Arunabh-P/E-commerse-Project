@@ -4,6 +4,7 @@ const asyncHandler = require('express-async-handler');
 /*
 1. Create Product
 2. Get a Product
+3. Get all Product
 
 
 */
@@ -32,4 +33,14 @@ const getAProduct = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { createProduct, getAProduct };
+// 3. Get all Product
+const getAllProduct = asyncHandler(async (req, res) => {
+  try {
+    const getAllProducts = await Product.find();
+    res.json(getAllProducts);
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
+module.exports = { createProduct, getAProduct, getAllProduct };
