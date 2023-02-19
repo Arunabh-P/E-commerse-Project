@@ -1,0 +1,20 @@
+:root {
+  --color-212529: #212529;
+  --color-ffd333: #ffd333;
+  --color-green: #47ad24;
+  --color-red: #e52e2e;
+  --color-828599: #828599;
+  --color-3d464d: #ed464d;
+  --color-c3d4da: #ced4da;
+}
+
+.green {
+  color: var(--color-green);
+  font-size: 14px;
+  font-family: Roboto !important;
+}
+.red {
+  color: var(--color-red);
+  font-size: 14px;
+  font-family: Roboto !important;
+}
