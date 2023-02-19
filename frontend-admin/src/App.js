@@ -14,6 +14,7 @@ import ColorList from './pages/ColorList';
 import CategoryList from './pages/CategoryList';
 import BrandList from './pages/BrandList';
 import ProductList from './pages/ProductList';
+import AddBlog from './pages/AddBlog';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="list-category" element={<CategoryList />} />
           <Route path="list-brand" element={<BrandList />} />
           <Route path="list-product" element={<ProductList />} />
+          <Route path="blog" element={<AddBlog />} />
         </Route>
       </Routes>
     </Router>
