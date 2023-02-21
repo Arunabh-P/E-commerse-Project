@@ -9,9 +9,11 @@ const authRouter = require('./routes/authRoute');
 const productRouter = require('./routes/productRoute');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 dbConnect();
 app.use(morgan('dev'));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
